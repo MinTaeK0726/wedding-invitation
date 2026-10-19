@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>김민태 ❤️ 장연주 결혼합니다</title>
+    <!-- 카카오톡 공유 미리보기(OG 태그) -->
+    <meta property="og:title" content="김민태 ❤️ 장연주의 모바일 청첩장">
+    <meta property="og:description" content="2027년 3월 6일 토요일 오전 11시, 플로렌스 파티하우스 가천대점">
+    <meta property="og:image" content="https://postfiles.pstatic.net/MjAyNjEwMjBfMjM1/MDAxNzkyNDMzOTU4Mjkw.2EgZHh6ZhPpkyTXv8AmggH2mBPesa-A7BSrK6aikYEAg.poGc5OAULQlddjLrTHi9QnNnJ2xOKtx0UZIvNEfuH1cg.JPEG/%EA%B9%80%EA%B0%95%EC%82%B0_100%EC%9D%BC_2%EC%B0%A8190.jpg?type=w3840">
+    
+    <style>
+        :root {
+            --primary: #9c7b60;
+            --primary-light: #f7f4f0;
+            --text-main: #333333;
+            --text-sub: #666666;
+            --bg-color: #faf9f6;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif; }
+        body { background-color: #eef0f2; color: var(--text-main); line-height: 1.6; display: flex; justify-content: center; }
+        .mobile-container { width: 100%; max-width: 480px; background-color: var(--bg-color); min-height: 100vh; box-shadow: 0 0 20px rgba(0,0,0,0.1); position: relative; }
+        
+        /* 공통 섹션 스타일 */
+        section { padding: 50px 24px; text-align: center; border-bottom: 1px solid #eee; }
+        h2.section-title { font-size: 1.1rem; color: var(--primary); letter-spacing: 2px; margin-bottom: 15px; font-weight: 600; }
+        
+        /* 메인 커버 */
+        .cover { padding: 0; position: relative; }
+        .cover-img-wrap { width: 100%; height: 550px; overflow: hidden; position: relative; }
+        .cover-img-wrap img { width: 100%; height: 100%; object-fit: cover; }
+        .cover-text { padding: 40px 20px; background: var(--bg-color); }
+        .cover-text h1 { font-size: 1.8rem; font-weight: 500; margin-bottom: 10px; color: #222; }
+        .cover-text .date-loc { font-size: 1rem; color: var(--text-sub); }
+
+        /* 어릴적 사진 섹션 스타일 */
+        .child-photos-wrap { display: flex; gap: 15px; justify-content: center; margin-top: 25px; padding: 0 10px; }
+        .child-card { flex: 1; background: #fff; padding: 12px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+        .child-img-wrap { width: 100%; height: 170px; border-radius: 8px; overflow: hidden; margin-bottom: 10px; }
+        .child-img-wrap img { width: 100%; height: 100%; object-fit: cover; }
+        .child-name { font-weight: bold; font-size: 0.95rem; color: var(--primary); }
+        .child-birth { font-size: 0.8rem; color: #666; margin-top: 3px; }
+
+        /* BGM 플로팅 버튼 */
+        .bgm-btn { position: fixed; top: 25px; right: 15px; z-index: 999; background: rgba(156, 123, 96, 0.9); color: white; border: none; padding: 8px 14px; border-radius: 20px; font-size: 0.8rem; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.2); transition: 0.2s; }
+        .bgm-btn:active { transform: scale(0.95); }
+
+        /* 인사말 및 연락처 섹션 */
+        .greeting { background: #fff; text-align: left; }
+        .greeting-text { text-align: center; font-size: 0.95rem; color: #555; line-height: 1.8; margin-bottom: 25px; }
+        
+        .names-info { font-size: 0.95rem; color: #333; background: #faf9f6; padding: 20px; border-radius: 10px; margin-top: 20px; }
+        .family-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; padding-bottom: 15px; border-bottom: 1px solid #eee; }
+        .family-row:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+        .family-info { font-weight: 500; }
+        
+        /* 연락처 버튼 그룹 스타일 */
+        .contact-btns { display: flex; gap: 5px; }
+        .contact-btn { background: #fff; border: 1px solid var(--primary); color: var(--primary); padding: 6px 10px; border-radius: 6px; font-size: 0.75rem; text-decoration: none; font-weight: bold; transition: 0.2s; text-align: center; }
+        .contact-btn:hover { background: var(--primary); color: #fff; }
+
+        /* 메인 연락처 버튼들 */
+        .btn-wrap { display: flex; gap: 10px; margin-top: 15px; }
+        .action-btn { flex: 1; background: #fff; border: 1px solid var(--primary); color: var(--primary); padding: 12px; border-radius: 8px; font-size: 0.9rem; font-weight: bold; cursor: pointer; text-decoration: none; display: inline-block; text-align: center; transition: 0.2s; }
+        .action-btn:hover { background: var(--primary); color: #fff; }
+
+        /* 계좌 정보 */
+        .account-section { background: #fff; text-align: left; }
+        .acc-group { background: #f9f9f9; border-radius: 10px; padding: 15px; margin-bottom: 15px; }
+        .acc-title { font-weight: bold; font-size: 0.95rem; margin-bottom: 8px; color: var(--primary); }
+        .acc-detail { display: flex; justify-content: space-between; align-items: center; font-size: 0.88rem; color: #555; margin-bottom: 6px; }
+        .acc-detail:last-child { margin-bottom: 0; }
+        .copy-btn { background: #e0d5cb; border: none; padding: 5px 10px; border-radius: 5px; font-size: 0.78rem; cursor: pointer; font-weight: bold; color: #444; }
+        .copy-btn:active { background: var(--primary); color: #fff; }
+
+        /* 방명록 섹션 스타일 */
+        .guestbook-section { background: #fff; text-align: left; }
+        .gb-form { background: #f9f9f9; padding: 20px; border-radius: 12px; margin-bottom: 25px; }
+        .gb-input-row { display: flex; gap: 10px; margin-bottom: 10px; }
+        .gb-input { flex: 1; padding: 10px; border: 1px solid #ddd; border-radius: 6px; font-size: 0.85rem; }
+        .gb-textarea { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 6px; font-size: 0.85rem; height: 80px; resize: none; margin-bottom: 10px; }
+        .gb-submit-btn { width: 100%; background: var(--primary); color: #fff; border: none; padding: 12px; border-radius: 6px; font-weight: bold; font-size: 0.9rem; cursor: pointer; }
+        
+        .gb-list { display: flex; flex-direction: column; gap: 12px; max-height: 400px; overflow-y: auto; }
+        .gb-item { background: #faf9f6; padding: 15px; border-radius: 8px; border: 1px solid #eee; position: relative; }
+        .gb-item-header { display: flex; justify-content: space-between; font-size: 0.85rem; font-weight: bold; color: var(--primary); margin-bottom: 6px; }
+        .gb-item-date { font-size: 0.75rem; color: #999; font-weight: normal; }
+        .gb-item-content { font-size: 0.9rem; color: #444; word-break: break-all; }
+        .gb-delete-btn { background: none; border: none; color: #999; font-size: 0.75rem; cursor: pointer; float: right; margin-top: 5px; }
+
+        /* 오시는 길 */
+        .map-section { background: var(--bg-color); text-align: left; }
+        .map-desc { font-size: 0.9rem; color: #555; margin-bottom: 15px; line-height: 1.5; }
+        .tip-box { background: #fff8f0; border-left: 3px solid var(--primary); padding: 12px; font-size: 0.85rem; color: #663300; margin-top: 15px; border-radius: 0 8px 8px 0; }
+
+        /* 푸터 */
+        footer { background: #333; color: #aaa; text-align: center; padding: 30px 20px; font-size: 0.85rem; }
+        
+        /* 토스트 팝업 */
+        #toast { position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%); background: rgba(0,0,0,0.8); color: #fff; padding: 10px 20px; border-radius: 20px; font-size: 0.85rem; display: none; z-index: 1000; }
+    </style>
+</head>
+<body>
+
+<!-- BGM 오디오 태그 -->
+<audio id="bgm" loop>
+    <source src="잇쉬가 잇샤에게 (With 이상혁 & 이시연 & 오종훈 & 안혜정).mp3" type="audio/mp3">
+</audio>
+
+<!-- BGM 컨트롤 버튼 -->
+<button class="bgm-btn" id="bgmToggleBtn" onclick="toggleBgm()">🎵 BGM 켜기</button>
+
+<div class="mobile-container">
+    <!-- 커버 이미지 및 일시 -->
+    <section class="cover">
+        <div class="cover-img-wrap">
+            <img src="1792426700015(1).jpg" alt="메인 웨딩 사진" onerror="this.src='https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80'">
+        </div>
+        <div class="cover-text">
+            <p style="font-size: 0.85rem; letter-spacing: 3px; color: var(--primary); margin-bottom: 8px;">WEDDING INVITATION</p>
+            <h1>김민태 &nbsp;·&nbsp; 장연주</h1>
+            <p class="date-loc" style="margin-top: 10px;">2027년 3월 6일 토요일 오전 11:00</p>
+            <p class="date-loc" style="font-size: 0.9rem; margin-top: 4px;">플로렌스 파티하우스 가천대점 3층 코스모스홀</p>
+
+<!-- 타이틀 밑 어릴적 사진 및 생년월일 영역 -->
+            <div class="child-photos-wrap">
+                <div class="child-card">
+                    <div style="font-size: 0.75rem; color: var(--text-sub); margin-bottom: 8px; font-weight: 500;">
+                        김종만 · 송명희 의 장남
+                    </div>
+                    <div class="child-img-wrap">
+                        <img src="김민태 92.07.26.jpg" alt="신랑 어릴적 사진">
+                    </div>
+                    <div class="child-name">신랑 김민태</div>
+                    <div class="child-birth">1992년 07월 26일 생</div>
+                </div>
+                <div class="child-card">
+                    <div style="font-size: 0.75rem; color: var(--text-sub); margin-bottom: 8px; font-weight: 500;">
+                        임경애 의 차녀
+                    </div>
+                    <div class="child-img-wrap">
+                        <img src="장연주 97.04.05.jpg" alt="신부 어릴적 사진">
+                    </div>
+                    <div class="child-name">신부 장연주</div>
+                    <div class="child-birth">1997년 04월 05일 생</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 인사말 및 연락처 섹션 -->
+    <section class="greeting">
+        <h2 class="section-title" style="text-align: center;">INVITATION</h2>
+        <p style="text-align: center; font-weight: 500; color: #222; margin-bottom: 25px;">소중한 분들을 초대합니다</p>
+        <div class="greeting-text">
+            서로가 마주 보며 다져온 사랑을<br>
+            이제 함께 같은 곳을 바라보며 걸어가고자 합니다.<br>
+            작은 소망으로 모여 이르는 길에<br>
+            따뜻한 격려로 축복해 주시면<br>
+            더 없는 기쁨으로 간직하겠습니다.
+        </div>
+        
+        <!-- 신랑 연락처 및 신랑 부모님 연락처 버튼 영역 -->
+        <div class="btn-wrap" style="margin-top: 0;">
+            <a href="tel:010-4437-9913" class="action-btn">신랑 전화하기</a>
+            <a href="sms:010-4437-9913" class="action-btn">신랑 문자하기</a>
+        </div>
+
+        <div class="names-info">
+            <div class="family-row">
+                <div class="family-info"><b>신랑 아버지</b> 김종만</div>
+                <div class="contact-btns">
+                    <a href="tel:010-6889-8483" class="contact-btn">📞 전화</a>
+                    <a href="sms:010-6889-8483" class="contact-btn">✉️ 문자</a>
+                </div>
+            </div>
+            <div class="family-row" style="margin-bottom:0; padding-bottom:0; border:none;">
+                <div class="family-info"><b>신랑 어머니</b> 송명희</div>
+                <div class="contact-btns">
+                    <a href="tel:010-7377-3346" class="contact-btn">📞 전화</a>
+                    <a href="sms:010-7377-3346" class="contact-btn">✉️ 문자</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 신부 연락처 버튼 영역 -->
+        <div class="btn-wrap">
+            <a href="tel:010-8528-5517" class="action-btn">신부 전화하기</a>
+            <a href="sms:010-8528-5517" class="action-btn">신부 문자하기</a>
+        </div>
+
+        <!-- 신부 측 어머니 및 오빠 연락처 영역 -->
+        <div class="names-info">
+            <div class="family-row">
+                <div class="family-info"><b>신부 어머니</b> 임경애</div>
+                <div class="contact-btns">
+                    <a href="tel:010-5412-5517" class="contact-btn">📞 전화</a>
+                    <a href="sms:010-5412-5517" class="contact-btn">✉️ 문자</a>
+                </div>
+            </div>
+            <div class="family-row" style="margin-bottom:0; padding-bottom:0; border:none;">
+                <div class="family-info"><b>신부 오빠</b> 장기군</div>
+                <div class="contact-btns">
+                    <a href="tel:010-9274-5517" class="contact-btn">📞 전화</a>
+                    <a href="sms:010-9274-5517" class="contact-btn">✉️ 문자</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 마음 전하실 곳 (계좌번호) -->
+    <section class="account-section">
+        <h2 class="section-title" style="text-align: center;">MAUM</h2>
+        <p style="text-align: center; font-size: 0.9rem; color: #666; margin-bottom: 25px;">따뜻한 마음을 전하실 수 있도록<br>계좌를 안내해 드립니다.</p>
+        
+        <!-- 신랑 측 계좌 -->
+        <div class="acc-group">
+            <div class="acc-title">신랑 측</div>
+            <div class="acc-detail">
+                <span>신랑 김민태 (우리 1002-652-830130)</span>
+                <button class="copy-btn" onclick="copyAccount('1002652830130')">복사</button>
+            </div>
+            <div class="acc-detail" style="margin-top: 8px;">
+                <span>어머니 송명희 (국민 229-21-0827-084)</span>
+                <button class="copy-btn" onclick="copyAccount('229210827084')">복사</button>
+            </div>
+        </div>
+
+        <!-- 신부 측 계좌 -->
+        <div class="acc-group">
+            <div class="acc-title">신부 측</div>
+            <div class="acc-detail">
+                <span>신부 장연주 (하나 409-910690-32107)</span>
+                <button class="copy-btn" onclick="copyAccount('40991069032107')">복사</button>
+            </div>
+        </div>
+
+        <div style="margin-top: 30px; background: #fff5f5; padding: 15px; border-radius: 8px; text-align: center; font-size: 0.85rem; color: #c0392b;">
+            💡 공간이 협소하오니 화환 대신 작은 꽃바구니로 보내주시면 정말 감사하겠습니다. ^^*
+        </div>
+    </section>
+
+    <!-- 축하 방명록 섹션 -->
+    <section class="guestbook-section">
+        <h2 class="section-title" style="text-align: center;">GUESTBOOK</h2>
+        <p style="text-align: center; font-size: 0.9rem; color: #666; margin-bottom: 25px;">두 사람의 앞날을 축복하는<br>따뜻한 한마디를 남겨주세요.</p>
+        
+        <div class="gb-form">
+            <!-- 1. 이름 칸 -->
+            <div class="gb-input-row">
+                <input type="text" id="gbName" class="gb-input" placeholder="이름">
+            </div>
+            <!-- 2. 비밀번호 칸 (이름과 내용 사이) -->
+                <input type="password" id="gbPw" class="gb-input" placeholder="비밀번호(삭제용)">
+            </div>
+            <!-- 3. 내용 칸 -->
+            <textarea id="gbMessage" class="gb-textarea" placeholder="축하 메시지를 남겨주세요"></textarea>
+            <button class="gb-submit-btn" onclick="addGuestbook()">방명록 남기기</button>
+        </div>
+
+        <div id="gbList" class="gb-list">
+            <!-- 방명록 아이템들이 여기에 동적으로 추가됩니다 -->
+        </div>
+    </section>
+
+    <!-- 오시는 길 -->
+    <section class="map-section">
+        <h2 class="section-title">LOCATION</h2>
+        <p style="font-weight: bold; font-size: 1rem; margin-bottom: 5px;">플로렌스 파티하우스 가천대점 3층 코스모스홀</p>
+        <p class="map-desc">경기 성남시 수정구 성남대로 1298</p>
+
+        <div class="btn-wrap" style="margin-bottom: 25px;">
+            <a href="https://map.naver.com/v5/search/플로렌스파티하우스가천대점" target="_blank" class="action-btn">네이버 지도</a>
+            <a href="https://kko.to/florence_gachon" target="_blank" class="action-btn">카카오맵</a>
+        </div>
+
+        <div style="font-size: 0.9rem; line-height: 1.6; text-align: left;">
+            <p style="font-weight: bold; color: var(--primary); margin-bottom: 5px;">🚇 지하철 이용 시</p>
+            <p style="margin-bottom: 15px; color: #555;">수인분당선 가천대역 3번 출구에서 전방 100미터 위치합니다.</p>
+
+            <p style="font-weight: bold; color: var(--primary); margin-bottom: 5px;">🚌 버스 이용 시</p>
+            <p style="margin-bottom: 15px; color: #555;">태평고개 (구)수진리고개 버스정류장 하차 도보 3미터 (횡단보도 건사실 필요 없이 직진거리에 5층 단독빌딩으로 찾기 편리하십니다.)</p>
+
+            <div class="tip-box">
+                🚗 <b>주차 및 교통 안내</b><br>
+                주차가 협소하오나 발렛파킹을 도와드리고 있습니다. 다만 대중교통이 편리한 위치이니 되도록 대중교통을 이용해주시면 감사하겠습니다!
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>김민태 ❤️ 장연주의 결혼식에 초대합니다</p>
+        <p style="margin-top: 8px; font-size: 0.8rem; color: #777;">Copyright © 2027 Min-tae & Yeon-joo</p>
+    </footer>
+</div>
+
+<div id="toast">계좌번호가 복사되었습니다.</div>
+
+<script>
+    // Supabase 설정 정보
+    const SUPABASE_URL = "https://ozjyuuyruivmyfjbyexf.supabase.co/rest/v1/guestbook";
+    const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im96anl1dXlydWl2bXlmamJ5ZXhmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTI0MzM3NTIsImV4cCI6MjEwODAwOTc1Mn0.HV_qxuXkbFBr85IhVl8nO_5RLmNMVT5o2KW9iKZgbts"; // 제공해주신 JWT 토큰
+
+    function copyAccount(text) {
+        navigator.clipboard.writeText(text).then(() => {
+            const toast = document.getElementById('toast');
+            toast.style.display = 'block';
+            setTimeout(() => {
+                toast.style.display = 'none';
+            }, 2000);
+        });
+    }
+
+    const bgm = document.getElementById('bgm');
+    const bgmBtn = document.getElementById('bgmToggleBtn');
+    let isPlaying = false;
+
+    function toggleBgm() {
+        if (isPlaying) {
+            bgm.pause();
+            isPlaying = false;
+            bgmBtn.textContent = '🎵 BGM 켜기';
+            bgmBtn.style.background = 'rgba(156, 123, 96, 0.9)';
+        } else {
+            bgm.play().then(() => {
+                isPlaying = true;
+                bgmBtn.textContent = '⏸️ BGM 끄기';
+                bgmBtn.style.background = 'rgba(192, 57, 43, 0.9)';
+            }).catch(error => {
+                console.log("재생 오류:", error);
+                alert("음원 파일을 불러오는 중입니다. 파일명과 위치를 확인해주세요.");
+            });
+        }
+    }
+
+    // 방명록 로직 (Supabase 연동)
+    document.addEventListener("DOMContentLoaded", loadGuestbook);
+
+    async function addGuestbook() {
+        const name = document.getElementById('gbName').value.trim();
+        const pw = document.getElementById('gbPw').value.trim();
+        const message = document.getElementById('gbMessage').value.trim();
+
+        if (!name || !pw || !message) {
+            alert("이름, 비밀번호, 내용을 모두 입력해주세요.");
+            return;
+        }
+
+        const dateStr = new Date().toLocaleDateString('ko-KR', { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' });
+        
+        const newItem = {
+            name: name,
+            pw: pw,
+            message: message,
+            date: dateStr
+        };
+
+        try {
+            const response = await fetch(SUPABASE_URL, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'apikey': SUPABASE_ANON_KEY,
+                    'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+                    'Prefer': 'return=minimal'
+                },
+                body: JSON.stringify(newItem)
+            });
+
+            if (response.ok) {
+                document.getElementById('gbName').value = '';
+                document.getElementById('gbPw').value = '';
+                document.getElementById('gbMessage').value = '';
+                loadGuestbook();
+            } else {
+                alert("방명록 등록에 실패했습니다.");
+            }
+        } catch (error) {
+            console.error("오류 발생:", error);
+            alert("서버 통신 중 오류가 발생했습니다.");
+        }
+    }
+
+    async function loadGuestbook() {
+        try {
+            // 최신순 정렬 (id 또는 생성일 기준 역순, 여기서는 생성된 데이터 역순으로 가져오기 위해 order 적용)
+            const response = await fetch(`${SUPABASE_URL}?select=*&order=id.desc`, {
+                method: 'GET',
+                headers: {
+                    'apikey': SUPABASE_ANON_KEY,
+                    'Authorization': `Bearer ${SUPABASE_ANON_KEY}`
+                }
+            });
+
+            if (response.ok) {
+                const list = await response.json();
+                renderGuestbook(list);
+            } else {
+                console.error("방명록을 불러오지 못했습니다.");
+            }
+        } catch (error) {
+            console.error("오류 발생:", error);
+        }
+    }
+
+    function renderGuestbook(list) {
+        const container = document.getElementById('gbList');
+        container.innerHTML = '';
+
+        if (!list || list.length === 0) {
+            container.innerHTML = '<p style="text-align:center; color:#999; font-size:0.85rem; padding: 20px;">아직 작성된 방명록이 없습니다. 첫 축하글을 남겨주세요!</p>';
+            return;
+        }
+
+        list.forEach(item => {
+            const div = document.createElement('div');
+            div.className = 'gb-item';
+            div.innerHTML = `
+                <div class="gb-item-header">
+                    <span>${item.name}</span>
+                    <span class="gb-item-date">${item.date || ''}</span>
+                </div>
+                <div class="gb-item-content">${item.message}</div>
+                <button class="gb-delete-btn" onclick="deleteGuestbook(${item.id}, '${item.pw}')">삭제</button>
+            `;
+            container.appendChild(div);
+        });
+    }
+
+    async function deleteGuestbook(id, correctPw) {
+        const pwInput = prompt("방명록 작성 시 입력한 비밀번호를 입력해주세요:");
+        if (!pwInput) return;
+
+        if (pwInput === correctPw) {
+            try {
+                const response = await fetch(`${SUPABASE_URL}?id=eq.${id}`, {
+                    method: 'DELETE',
+                    headers: {
+                        'apikey': SUPABASE_ANON_KEY,
+                        'Authorization': `Bearer ${SUPABASE_ANON_KEY}`
+                    }
+                });
+
+                if (response.ok) {
+                    alert("방명록이 삭제되었습니다.");
+                    loadGuestbook();
+                } else {
+                    alert("삭제에 실패했습니다.");
+                }
+            } catch (error) {
+                console.error("오류 발생:", error);
+                alert("서버 통신 중 오류가 발생했습니다.");
+            }
+        } else {
+            alert("비밀번호가 일치하지 않습니다.");
+        }
+    }
+</script>
+
+</body>
+</html>
