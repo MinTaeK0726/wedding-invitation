@@ -91,6 +91,47 @@
         .gb-item-content { font-size: 0.9rem; color: #444; word-break: break-all; }
         .gb-delete-btn { background: none; border: none; color: #999; font-size: 0.75rem; cursor: pointer; float: right; margin-top: 5px; }
 
+        /* 서프라이즈 섹션 스타일 */
+        .surprise-section {
+        width: 100%;
+        max-width: 600px;
+        margin: 40px auto;
+        padding: 0 16px;
+        box-sizing: border-box;
+        text-align: center;
+       }
+       .image-wrapper {
+        width: 100%;
+        margin: 12px 0;
+       }
+       .responsive-img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 12px;
+       }
+       .content-box {
+        padding: 24px 12px;
+        background-color: #fff9f0;
+        border-radius: 16px;
+        margin: 16px 0;
+        }
+        .title {
+        font-size: 24px;
+        font-weight: bold;
+        color: #ff6b6b;
+        letter-spacing: 2px;
+        margin-bottom: 12px;
+        }
+        .text {
+        font-size: 15px;
+        line-height: 1.6;
+        color: #4a4a4a;
+        word-break: keep-all;
+        margin: 0;
+        }
+        /*서프라이즈 섹션 끝*/
+
         /* 오시는 길 */
         .map-section { background: var(--bg-color); text-align: left; }
         .map-desc { font-size: 0.9rem; color: #555; margin-bottom: 15px; line-height: 1.5; }
@@ -264,6 +305,29 @@
             <!-- 방명록 아이템들이 여기에 동적으로 추가됩니다 -->
         </div>
     </section>
+
+<!-- 서프라이즈 섹션 시작 -->
+<section class="surprise-section">
+  <!-- 상단 이미지 (별_상) -->
+  <div class="image-wrapper">
+    <img src="별_상.jpg" alt="예별이 이미지 상단" class="responsive-img">
+  </div>
+
+  <!-- 제목 및 축하 내용 -->
+  <div class="content-box">
+    <h2 class="title">SURPRISE</h2>
+    <p class="text">
+      오늘은 우리 이쁘고 소중한 딸 예별이의 생일이기도 해요!🎂<br>
+      같이 축하해주시면 정말 감사할 것 같아요!♡
+    </p>
+  </div>
+
+  <!-- 하단 이미지 (별_하) -->
+  <div class="image-wrapper">
+    <img src="별_하.jpg" alt="예별이 이미지 하단" class="responsive-img">
+  </div>
+</section>
+<!-- 서프라이즈 섹션 끝 -->
 
     <!-- 오시는 길 -->
     <section class="map-section">
