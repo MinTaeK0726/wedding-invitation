@@ -76,9 +76,10 @@
         /* 방명록 섹션 스타일 */
         .guestbook-section { background: #fff; text-align: left; }
         .gb-form { background: #f9f9f9; padding: 20px; border-radius: 12px; margin-bottom: 25px; }
-        .gb-input-row { display: flex; gap: 10px; margin-bottom: 10px; }
+        .gb-input-row { display: flex; gap: 8px; margin-bottom: 10px; width: 100%; }
         /* 방명록 입력 필드 스타일 */
-        .gb-input { flex: 1; padding: 10px; border: 1px solid #ddd; border-radius: 6px; font-size: 0.85rem; margin-bottom: 10px; }
+        .gb-input { flex: 1; min-width: 0; /*<-- flexbox에서 input이 부모보다 커지는 것을 방지*/
+            padding: 10px; border: 1px solid #ddd; border-radius: 6px; font-size: 0.85rem; margin-bottom: 10px; }
         
         .gb-textarea { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 6px; font-size: 0.85rem; height: 80px; resize: none; margin-bottom: 10px; }
         .gb-submit-btn { width: 100%; background: var(--primary); color: #fff; border: none; padding: 12px; border-radius: 6px; font-weight: bold; font-size: 0.9rem; cursor: pointer; }
