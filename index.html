@@ -78,7 +78,7 @@
         .gb-form { background: #f9f9f9; padding: 20px; border-radius: 12px; margin-bottom: 25px; }
         .gb-input-row { display: flex; gap: 10px; margin-bottom: 10px; }
         /* 방명록 입력 필드 스타일 */
-        .gb-input { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 6px; font-size: 0.85rem; margin-bottom: 10px; }
+        .gb-input { flex: 1; padding: 10px; border: 1px solid #ddd; border-radius: 6px; font-size: 0.85rem; margin-bottom: 10px; }
         
         .gb-textarea { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 6px; font-size: 0.85rem; height: 80px; resize: none; margin-bottom: 10px; }
         .gb-submit-btn { width: 100%; background: var(--primary); color: #fff; border: none; padding: 12px; border-radius: 6px; font-weight: bold; font-size: 0.9rem; cursor: pointer; }
@@ -252,8 +252,8 @@
             <!-- 1. 이름 칸 -->
             <div class="gb-input-row">
                 <input type="text" id="gbName" class="gb-input" placeholder="이름">            
-            <!-- 2. 비밀번호 칸 (이름과 내용 사이) -->
                 <input type="password" id="gbPw" class="gb-input" placeholder="비밀번호(삭제용)">
+            </div>
             <!-- 3. 내용 칸 -->
             <textarea id="gbMessage" class="gb-textarea" placeholder="축하 메시지를 남겨주세요"></textarea>
             <button class="gb-submit-btn" onclick="addGuestbook()">방명록 남기기</button>
