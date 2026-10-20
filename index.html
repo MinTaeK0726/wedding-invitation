@@ -112,7 +112,7 @@
 
 <div class="mobile-container">
     <!-- BGM 컨트롤 버튼 -->
-    <button class="bgm-btn" id="bgmToggleBtn" onclick="toggleBgm()">🎵 BGM 켜기</button>
+    <button class="bgm-btn" id="bgmToggleBtn" onclick="toggleBgm()">⏸️ BGM 끄기</button>
 
 
     <!-- 커버 이미지 및 일시 -->
@@ -315,8 +315,29 @@
 
     const bgm = document.getElementById('bgm');
     const bgmBtn = document.getElementById('bgmToggleBtn');
-    let isPlaying = false;
+    let isPlaying = true;  // 초기 상태는 재생 중
 
+// 페이지 로드 시 자동 재생 시도
+    window.addEventListener('DOMContentLoaded', () => {
+        bgm.play().then(() => {
+            isPlaying = true;
+            bgmBtn.textContent = '⏸️ BGM 끄기';
+            bgmBtn.style.background = 'rgba(192, 57, 43, 0.9)';
+        }).catch(error => {
+            // 브라우저 차단으로 자동 재생이 안 된 경우, 화면을 처음 터치할 때 재생되도록 설정
+            console.log("자동 재생 차단됨, 사용자 상호작용 대기 중");
+            document.addEventListener('click', function playOnTouch() {
+                bgm.play().then(() => {
+                    isPlaying = true;
+                    bgmBtn.textContent = '⏸️ BGM 끄기';
+                    bgmBtn.style.background = 'rgba(192, 57, 43, 0.9)';
+                    document.removeEventListener('click', playOnTouch); // 한 번 실행 후 이벤트 제거
+                });
+            }, { once: true });
+        });
+    });
+
+// 버튼을 누를 때는 이제 '끄기/켜기' 토글로 작동
     function toggleBgm() {
         if (isPlaying) {
             bgm.pause();
@@ -328,13 +349,9 @@
                 isPlaying = true;
                 bgmBtn.textContent = '⏸️ BGM 끄기';
                 bgmBtn.style.background = 'rgba(192, 57, 43, 0.9)';
-            }).catch(error => {
-                console.log("재생 오류:", error);
-                alert("음원 파일을 불러오는 중입니다. 파일명과 위치를 확인해주세요.");
             });
-        }
-    }
-
+        }    
+        
     // 방명록 로직 (Supabase 연동)
     document.addEventListener("DOMContentLoaded", loadGuestbook);
 
