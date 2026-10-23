@@ -109,37 +109,47 @@
         .title { font-size: 24px; font-weight: bold; color: #ff6b6b; letter-spacing: 2px; margin-bottom: 12px; }
         .text { font-size: 15px; line-height: 1.6; color: #4a4a4a; word-break: keep-all; margin: 0; }
 
-        /* 오시는 길 섹션 스타일 (배경 사진) */
+/* 오시는 길 섹션 스타일 */
         .map-section { 
             position: relative;
-            /* 👇 배경 사진 경로 설정 (실제 올리신 파일명으로 지정해주세요) */
-            background-image: url('./map-back.JPG'); 
+            text-align: left; 
+            overflow: hidden; /* 배경 이미지가 섹션 밖으로 넘어가지 않도록 설정 */
+        }
+
+        /* 👇 배경 사진만 흑백으로 만들어주는 가상 요소 */
+        .map-section::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: url('./map-back.jpg'); /* 배경 사진 파일명 */
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            text-align: left; 
+            
+            filter: grayscale(100%); /* 👈 배경 사진만 흑백 처리! */
+            z-index: 1; /* 카드 뒤로 보내기 */
         }
 
-        /* 오시는 길 내부 흰색 박스 카드 */
+        /* 오시는 길 내부 카드 박스 (투명도 조정) */
         .map-card-box {
-            background: rgba(255, 255, 255, 0.92); /* 흰색 반투명 카드 */
+            position: relative;
+            z-index: 2; /* 흑백 배경 위에 올라오도록 설정 */
+            
+            /* 👇 흰색 투명도 (0.65 = 65% 투명도 / 필요시 0.5~0.8 사이로 조절) */
+            background: rgba(255, 255, 255, 0.65); 
             padding: 24px 20px;
             border-radius: 16px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
             margin-top: 15px;
+            backdrop-filter: blur(3px); /* 💡 뒤쪽 흑백 사진이 살짝 흐릿하게 비쳐 더욱 분위기 있어집니다 */
         }
 
-        /* 주차 안내 팁 박스 (색상 명확히 지정) */
-        .tip-box { 
-            background-color: #fff8f0 !important; 
-            border-left: 3px solid var(--primary); 
-            padding: 12px; 
-            font-size: 0.85rem; 
-            color: #663300; 
-            margin-top: 15px; 
-            border-radius: 0 8px 8px 0; 
-        }
-
+        /* 타이틀 위치 고정 */
+        .map-section .section-title {
+            position: relative;
+            z-index: 2;
+        }        
+        
         /* 푸터 */
         footer { background: #333; color: #aaa; text-align: center; padding: 30px 20px; font-size: 0.85rem; }
         
