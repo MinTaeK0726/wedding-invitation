@@ -109,48 +109,35 @@
         .title { font-size: 24px; font-weight: bold; color: #ff6b6b; letter-spacing: 2px; margin-bottom: 12px; }
         .text { font-size: 15px; line-height: 1.6; color: #4a4a4a; word-break: keep-all; margin: 0; }
 
-/* 오시는 길 섹션 스타일 (배경 사진 적용) */
-        .map-section { 
-            position: relative;
-            text-align: left; 
+        /* 오시는 길 섹션 스타일 (사진을 위로 배치) */
+        .map-section { background: var(--bg-color); text-align: left; }
+        .map-img-wrap { 
+            width: 100%; 
+            height: 220px; 
+            border-radius: 12px; 
             overflow: hidden; 
+            margin-bottom: 20px; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        .map-img-wrap img { 
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; 
+            display: block; 
+        }
+        .map-desc { font-size: 0.9rem; color: #555; margin-bottom: 15px; line-height: 1.5; }
+        
+        /* 주차 안내 팁 박스 */
+        .tip-box { 
+            background-color: #fff8f0; 
+            border-left: 3px solid var(--primary); 
+            padding: 12px; 
+            font-size: 0.85rem; 
+            color: #663300; 
+            margin-top: 15px; 
+            border-radius: 0 8px 8px 0; 
         }
 
-        /* 배경 사진 가상 요소 */
-        .map-section::before {
-            content: '';
-            position: absolute;
-            top: 0; 
-            left: 0; 
-            right: 0; 
-            bottom: 0; /* 이 네 방향을 모두 0으로 주어야 섹션 전체에 꽉 찹니다 */
-            background-image: url('./map-back.jpg'); /* 👈 본인 파일명과 확장자에 맞게 수정 */
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            filter: grayscale(100%); /* 흑백 처리 */
-            z-index: 1; 
-        }
-
-        /* 오시는 길 내부 카드 박스 */
-        .map-card-box {
-            position: relative;
-            z-index: 2; /* 배경보다 위로 오도록 설정 */
-            background: rgba(255, 255, 255, 0.65); /* 은은한 반투명 흰색 */
-            padding: 24px 20px;
-            border-radius: 16px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            margin-top: 15px;
-            backdrop-filter: blur(3px);
-        }
-
-        /* 타이틀 위치 고정 */
-        .map-section .section-title {
-            position: relative;
-            z-index: 2;
-            color: #fff;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
-        }        
         /* 푸터 */
         footer { background: #333; color: #aaa; text-align: center; padding: 30px 20px; font-size: 0.85rem; }
         
@@ -330,34 +317,37 @@
         </p>
        </div>
       <div class="image-wrapper">
-        <img src="별_하.jpg" alt="예별이 이미지 하단" class="responsive-img">
+        <img src="별_하.jpg" alt="예별이 이미지 상단" class="responsive-img">
       </div>
     </section>
 
-    <!-- 오시는 길 -->
+    <!-- 오시는 길 (사진을 위로 배치) -->
     <section class="map-section">
-        <h2 class="section-title">LOCATION</h2>
+        <h2 class="section-title" style="text-align: center;">LOCATION</h2>
         
-        <div class="map-card-box">
-            <p style="font-weight: bold; font-size: 1rem; margin-bottom: 5px; color: #333;">플로렌스 파티하우스 가천대점 3층 코스모스홀</p>
-            <p class="map-desc">경기 성남시 수정구 성남대로 1298</p>
+        <!-- 👇 오시는 길 대표 사진을 타이틀 바로 아래(위쪽)에 배치 -->
+        <div class="map-img-wrap">
+            <img src="map-back.jpg" alt="오시는 길 안내 사진">
+        </div>
 
-            <div class="btn-wrap" style="margin-bottom: 25px;">
-                <a href="https://map.naver.com/v5/search/플로렌스파티하우스가천대점" target="_blank" class="action-btn">네이버 지도</a>
-                <a href="https://kko.to/florence_gachon" target="_blank" class="action-btn">카카오맵</a>
-            </div>
+        <p style="font-weight: bold; font-size: 1rem; margin-bottom: 5px;">플로렌스 파티하우스 가천대점 3층 코스모스홀</p>
+        <p class="map-desc">경기 성남시 수정구 성남대로 1298</p>
 
-            <div style="font-size: 0.9rem; line-height: 1.6; text-align: left;">
-                <p style="font-weight: bold; color: var(--primary); margin-bottom: 5px;">🚇 지하철 이용 시</p>
-                <p style="margin-bottom: 15px; color: #555;">수인분당선 가천대역 3번 출구에서 전방 100미터 위치합니다.</p>
+        <div class="btn-wrap" style="margin-bottom: 25px;">
+            <a href="https://map.naver.com/v5/search/플로렌스파티하우스가천대점" target="_blank" class="action-btn">네이버 지도</a>
+            <a href="https://kko.to/florence_gachon" target="_blank" class="action-btn">카카오맵</a>
+        </div>
 
-                <p style="font-weight: bold; color: var(--primary); margin-bottom: 5px;">🚌 버스 이용 시</p>
-                <p style="margin-bottom: 15px; color: #555;">태평고개 (구)수진리고개 버스정류장 하차 도보 3미터 (횡단보도 건사실 필요 없이 직진거리에 5층 단독빌딩으로 찾기 편리하십니다.)</p>
+        <div style="font-size: 0.9rem; line-height: 1.6; text-align: left;">
+            <p style="font-weight: bold; color: var(--primary); margin-bottom: 5px;">🚇 지하철 이용 시</p>
+            <p style="margin-bottom: 15px; color: #555;">수인분당선 가천대역 3번 출구에서 전방 100미터 위치합니다.</p>
 
-                <div class="tip-box" style="background-color: #fff8f0; border-left: 3px solid var(--primary); padding: 12px; font-size: 0.85rem; color: #663300; margin-top: 15px; border-radius: 0 8px 8px 0;">
-                    🚗 <b>주차 및 교통 안내</b><br>
-                    주차가 협소하오나 발렛파킹을 도와드리고 있습니다. 다만 대중교통이 편리한 위치이니 되도록 대중교통을 이용해주시면 감사하겠습니다!
-                </div>
+            <p style="font-weight: bold; color: var(--primary); margin-bottom: 5px;">🚌 버스 이용 시</p>
+            <p style="margin-bottom: 15px; color: #555;">태평고개 (구)수진리고개 버스정류장 하차 도보 3미터 (횡단보도 건사실 필요 없이 직진거리에 5층 단독빌딩으로 찾기 편리하십니다.)</p>
+
+            <div class="tip-box">
+                🚗 <b>주차 및 교통 안내</b><br>
+                주차가 협소하오나 발렛파킹을 도와드리고 있습니다. 다만 대중교통이 편리한 위치이니 되도록 대중교통을 이용해주시면 감사하겠습니다!
             </div>
         </div>
     </section>
