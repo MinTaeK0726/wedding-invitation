@@ -77,9 +77,7 @@
         .guestbook-section { background: #fff; text-align: left; }
         .gb-form { background: #f9f9f9; padding: 20px; border-radius: 12px; margin-bottom: 25px; }
         .gb-input-row { display: flex; gap: 8px; margin-bottom: 10px; width: 100%; }
-        /* 방명록 입력 필드 스타일 */
-        .gb-input { flex: 1; min-width: 0; /*<-- flexbox에서 input이 부모보다 커지는 것을 방지*/
-            padding: 10px; border: 1px solid #ddd; border-radius: 6px; font-size: 0.85rem; margin-bottom: 10px; }
+        .gb-input { flex: 1; min-width: 0; padding: 10px; border: 1px solid #ddd; border-radius: 6px; font-size: 0.85rem; margin-bottom: 10px; }
         
         .gb-textarea { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 6px; font-size: 0.85rem; height: 80px; resize: none; margin-bottom: 10px; }
         .gb-submit-btn { width: 100%; background: var(--primary); color: #fff; border: none; padding: 12px; border-radius: 6px; font-weight: bold; font-size: 0.9rem; cursor: pointer; }
@@ -93,76 +91,44 @@
 
         /* 서프라이즈 섹션 스타일 */
         .surprise-section {
-        width: 100%;
-        max-width: 600px;
-        margin: 40px auto;
-        padding: 0 16px;
-        box-sizing: border-box;
-        text-align: center;
-       }
-       .image-wrapper {
-        width: 100%;
-        margin: 12px 0;
-       }
-       .responsive-img {
-        width: 100%;
-        height: auto;
-        display: block;
-        border-radius: 12px;
-       }
-       .content-box {
-        padding: 24px 12px;
-        background-color: #fff9f0;
-        border-radius: 16px;
-        margin: 16px 0;
+            width: 100%;
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 0 16px;
+            box-sizing: border-box;
+            text-align: center;
         }
-        .title {
-        font-size: 24px;
-        font-weight: bold;
-        color: #ff6b6b;
-        letter-spacing: 2px;
-        margin-bottom: 12px;
+        .image-wrapper { width: 100%; margin: 12px 0; }
+        .responsive-img { width: 100%; height: auto; display: block; border-radius: 12px; }
+        .content-box {
+            padding: 24px 12px;
+            background-color: #fff9f0;
+            border-radius: 16px;
+            margin: 16px 0;
         }
-        .text {
-        font-size: 15px;
-        line-height: 1.6;
-        color: #4a4a4a;
-        word-break: keep-all;
-        margin: 0;
+        .title { font-size: 24px; font-weight: bold; color: #ff6b6b; letter-spacing: 2px; margin-bottom: 12px; }
+        .text { font-size: 15px; line-height: 1.6; color: #4a4a4a; word-break: keep-all; margin: 0; }
+
+        /* 오시는 길 섹션 배경 사진 설정 */
+        .map-section { 
+            position: relative;
+            background-image: url('교통안내배경사진.jpg'); /* 👈 사용하실 배경 사진 파일명으로 변경해주세요 */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            text-align: left; 
         }
-        /*서프라이즈 섹션 끝*/
 
+        /* 사진 위에서 글씨가 잘 보이도록 감싸주는 하얀색 반투명 카드 박스 */
+        .map-card-box {
+            background: rgba(255, 255, 255, 0.95); /* 흰색 반투명 배경 */
+            padding: 24px 20px;
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin-top: 20px;
+        }
 
-    <!-- 오시는 길 -->
-    <section class="map-section">
-        <!-- 배경 사진 위에서 눈에 띄도록 타이틀 색상 조정 -->
-        <h2 class="section-title" style="color: #fff; text-shadow: 0 2px 4px rgba(0,0,0,0.3); margin-bottom: 0;">LOCATION</h2>
-        
-        <!-- 👇 교통 안내 글씨 밑에 깔릴 배경 카드 박스 -->
-        <div class="map-card-box">
-            <p style="font-weight: bold; font-size: 1rem; margin-bottom: 5px; color: #333;">플로렌스 파티하우스 가천대점 3층 코스모스홀</p>
-            <p class="map-desc">경기 성남시 수정구 성남대로 1298</p>
-
-            <div class="btn-wrap" style="margin-bottom: 25px;">
-                <a href="https://map.naver.com/v5/search/플로렌스파티하우스가천대점" target="_blank" class="action-btn">네이버 지도</a>
-                <a href="https://kko.to/florence_gachon" target="_blank" class="action-btn">카카오맵</a>
-            </div>
-
-            <div style="font-size: 0.9rem; line-height: 1.6; text-align: left;">
-                <p style="font-weight: bold; color: var(--primary); margin-bottom: 5px;">🚇 지하철 이용 시</p>
-                <p style="margin-bottom: 15px; color: #555;">수인분당선 가천대역 3번 출구에서 전방 100미터 위치합니다.</p>
-
-                <p style="font-weight: bold; color: var(--primary); margin-bottom: 5px;">🚌 버스 이용 시</p>
-                <p style="margin-bottom: 15px; color: #555;">태평고개 (구)수진리고개 버스정류장 하차 도보 3미터 (횡단보도 건사실 필요 없이 직진거리에 5층 단독빌딩으로 찾기 편리하십니다.)</p>
-
-                <div class="tip-box">
-                    🚗 <b>주차 및 교통 안내</b><br>
-                    주차가 협소하오나 발렛파킹을 도와드리고 있습니다. 다만 대중교통이 편리한 위치이니 되도록 대중교통을 이용해주시면 감사하겠습니다!
-                </div>
-            </div>
-        </div>
-    </section>        
-    /* 푸터 */
+        /* 푸터 */
         footer { background: #333; color: #aaa; text-align: center; padding: 30px 20px; font-size: 0.85rem; }
         
         /* 토스트 팝업 */
@@ -180,7 +146,6 @@
     <!-- BGM 컨트롤 버튼 -->
     <button class="bgm-btn" id="bgmToggleBtn" onclick="toggleBgm()">⏸️ BGM 끄기</button>
 
-
     <!-- 커버 이미지 및 일시 -->
     <section class="cover">
         <div class="cover-img-wrap">
@@ -192,7 +157,7 @@
             <p class="date-loc" style="margin-top: 10px;">2027년 3월 6일 토요일 오전 11:00</p>
             <p class="date-loc" style="font-size: 0.9rem; margin-top: 4px;">플로렌스 파티하우스 가천대점 3층 코스모스홀</p>
 
-<!-- 타이틀 밑 어릴적 사진 및 생년월일 영역 -->
+            <!-- 어릴적 사진 영역 -->
             <div class="child-photos-wrap">
                 <div class="child-card">
                     <div style="font-size: 0.75rem; color: var(--text-sub); margin-bottom: 8px; font-weight: 500;">
@@ -230,7 +195,6 @@
             더 없는 기쁨으로 간직하겠습니다.
         </div>
         
-        <!-- 신랑 연락처 및 신랑 부모님 연락처 버튼 영역 -->
         <div class="btn-wrap" style="margin-top: 0;">
             <a href="tel:010-4437-9913" class="action-btn">신랑 전화하기</a>
             <a href="sms:010-4437-9913" class="action-btn">신랑 문자하기</a>
@@ -253,13 +217,11 @@
             </div>
         </div>
 
-        <!-- 신부 연락처 버튼 영역 -->
         <div class="btn-wrap">
             <a href="tel:010-8528-5517" class="action-btn">신부 전화하기</a>
             <a href="sms:010-8528-5517" class="action-btn">신부 문자하기</a>
         </div>
 
-        <!-- 신부 측 어머니 및 오빠 연락처 영역 -->
         <div class="names-info">
             <div class="family-row">
                 <div class="family-info"><b>신부 어머니</b> 임경애</div>
@@ -276,9 +238,9 @@
                 </div>
             </div>
         </div>
-    </section> <!-- 👈 greeting 섹션이 여기서 끝납니다! -->
+    </section>
 
-    <!-- 👇 여기에 신부 단독 사진 섹션을 새로 추가해주세요! -->
+    <!-- 신부 단독 사진 섹션 -->
     <section class="photo-banner-section" style="padding: 0;">
         <div style="width: 100%; overflow: hidden;">
             <img src="bride.jpg" alt="신부 연주 단독 사진" style="width: 100%; height: auto; display: block;">
@@ -290,7 +252,6 @@
         <h2 class="section-title" style="text-align: center;">MAUM</h2>
         <p style="text-align: center; font-size: 0.9rem; color: #666; margin-bottom: 25px;">따뜻한 마음을 전하실 수 있도록<br>계좌를 안내해 드립니다.</p>
         
-        <!-- 신랑 측 계좌 -->
         <div class="acc-group">
             <div class="acc-title">신랑 측</div>
             <div class="acc-detail">
@@ -303,7 +264,6 @@
             </div>
         </div>
 
-        <!-- 신부 측 계좌 -->
         <div class="acc-group">
             <div class="acc-title">신부 측</div>
             <div class="acc-detail">
@@ -323,29 +283,22 @@
         <p style="text-align: center; font-size: 0.9rem; color: #666; margin-bottom: 25px;">두 사람의 앞날을 축복하는<br>따뜻한 한마디를 남겨주세요.</p>
         
         <div class="gb-form">
-            <!-- 1. 이름 칸 -->
             <div class="gb-input-row">
                 <input type="text" id="gbName" class="gb-input" placeholder="이름">            
                 <input type="password" id="gbPw" class="gb-input" placeholder="비밀번호(삭제용)">
             </div>
-            <!-- 3. 내용 칸 -->
             <textarea id="gbMessage" class="gb-textarea" placeholder="축하 메시지를 남겨주세요"></textarea>
             <button class="gb-submit-btn" onclick="addGuestbook()">방명록 남기기</button>
         </div>
 
-        <div id="gbList" class="gb-list">
-            <!-- 방명록 아이템들이 여기에 동적으로 추가됩니다 -->
-        </div>
+        <div id="gbList" class="gb-list"></div>
     </section>
 
-     <!-- 서프라이즈 섹션 시작 -->
-     <section class="surprise-section">
-      <!-- 상단 이미지 (별_상) -->
+    <!-- 서프라이즈 섹션 -->
+    <section class="surprise-section">
       <div class="image-wrapper">
         <img src="별_상.jpg" alt="예별이 이미지 상단" class="responsive-img">
       </div>
-
-      <!-- 제목 및 축하 내용 -->
       <div class="content-box">
        <h2 class="title">SURPRISE</h2>
        <p class="text">
@@ -354,35 +307,35 @@
         같이 축하해주시면 정말 감사할 것 같아요!♡
         </p>
        </div>
-
-      <!-- 하단 이미지 (별_하) -->
       <div class="image-wrapper">
         <img src="별_하.jpg" alt="예별이 이미지 하단" class="responsive-img">
       </div>
     </section>
-    <!-- 서프라이즈 섹션 끝 -->
 
-    <!-- 오시는 길 -->
+    <!-- 오시는 길 (배경 사진 적용 및 흰색 카드 박스 구조) -->
     <section class="map-section">
-        <h2 class="section-title">LOCATION</h2>
-        <p style="font-weight: bold; font-size: 1rem; margin-bottom: 5px;">플로렌스 파티하우스 가천대점 3층 코스모스홀</p>
-        <p class="map-desc">경기 성남시 수정구 성남대로 1298</p>
+        <h2 class="section-title" style="color: #fff; text-shadow: 0 2px 4px rgba(0,0,0,0.3); margin-bottom: 0;">LOCATION</h2>
+        
+        <div class="map-card-box">
+            <p style="font-weight: bold; font-size: 1rem; margin-bottom: 5px; color: #333;">플로렌스 파티하우스 가천대점 3층 코스모스홀</p>
+            <p class="map-desc">경기 성남시 수정구 성남대로 1298</p>
 
-        <div class="btn-wrap" style="margin-bottom: 25px;">
-            <a href="https://map.naver.com/v5/search/플로렌스파티하우스가천대점" target="_blank" class="action-btn">네이버 지도</a>
-            <a href="https://kko.to/florence_gachon" target="_blank" class="action-btn">카카오맵</a>
-        </div>
+            <div class="btn-wrap" style="margin-bottom: 25px;">
+                <a href="https://map.naver.com/v5/search/플로렌스파티하우스가천대점" target="_blank" class="action-btn">네이버 지도</a>
+                <a href="https://kko.to/florence_gachon" target="_blank" class="action-btn">카카오맵</a>
+            </div>
 
-        <div style="font-size: 0.9rem; line-height: 1.6; text-align: left;">
-            <p style="font-weight: bold; color: var(--primary); margin-bottom: 5px;">🚇 지하철 이용 시</p>
-            <p style="margin-bottom: 15px; color: #555;">수인분당선 가천대역 3번 출구에서 전방 100미터 위치합니다.</p>
+            <div style="font-size: 0.9rem; line-height: 1.6; text-align: left;">
+                <p style="font-weight: bold; color: var(--primary); margin-bottom: 5px;">🚇 지하철 이용 시</p>
+                <p style="margin-bottom: 15px; color: #555;">수인분당선 가천대역 3번 출구에서 전방 100미터 위치합니다.</p>
 
-            <p style="font-weight: bold; color: var(--primary); margin-bottom: 5px;">🚌 버스 이용 시</p>
-            <p style="margin-bottom: 15px; color: #555;">태평고개 (구)수진리고개 버스정류장 하차 도보 3미터 (횡단보도 건사실 필요 없이 직진거리에 5층 단독빌딩으로 찾기 편리하십니다.)</p>
+                <p style="font-weight: bold; color: var(--primary); margin-bottom: 5px;">🚌 버스 이용 시</p>
+                <p style="margin-bottom: 15px; color: #555;">태평고개 (구)수진리고개 버스정류장 하차 도보 3미터 (횡단보도 건사실 필요 없이 직진거리에 5층 단독빌딩으로 찾기 편리하십니다.)</p>
 
-            <div class="tip-box">
-                🚗 <b>주차 및 교통 안내</b><br>
-                주차가 협소하오나 발렛파킹을 도와드리고 있습니다. 다만 대중교통이 편리한 위치이니 되도록 대중교통을 이용해주시면 감사하겠습니다!
+                <div class="tip-box" style="background: #fff8f0; border-left: 3px solid var(--primary); padding: 12px; font-size: 0.85rem; color: #663300; margin-top: 15px; border-radius: 0 8px 8px 0;">
+                    🚗 <b>주차 및 교통 안내</b><br>
+                    주차가 협소하오나 발렛파킹을 도와드리고 있습니다. 다만 대중교통이 편리한 위치이니 되도록 대중교통을 이용해주시면 감사하겠습니다!
+                </div>
             </div>
         </div>
     </section>
@@ -396,9 +349,8 @@
 <div id="toast">계좌번호가 복사되었습니다.</div>
 
 <script>
-    // Supabase 설정 정보
     const SUPABASE_URL = "https://ozjyuuyruivmyfjbyexf.supabase.co/rest/v1/guestbook";
-    const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im96anl1dXlydWl2bXlmamJ5ZXhmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTI0MzM3NTIsImV4cCI6MjEwODAwOTc1Mn0.HV_qxuXkbFBr85IhVl8nO_5RLmNMVT5o2KW9iKZgbts"; // 제공해주신 JWT 토큰
+    const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im96anl1dXlydWl2bXlmamJ5ZXhmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTI0MzM3NTIsImV4cCI6MjEwODAwOTc1Mn0.HV_qxuXkbFBr85IhVl8nO_5RLmNMVT5o2KW9iKZgbts";
 
     function copyAccount(text) {
         navigator.clipboard.writeText(text).then(() => {
@@ -412,29 +364,26 @@
 
     const bgm = document.getElementById('bgm');
     const bgmBtn = document.getElementById('bgmToggleBtn');
-    let isPlaying = true;  // 초기 상태는 재생 중
+    let isPlaying = true;
 
-// 페이지 로드 시 자동 재생 시도
     window.addEventListener('DOMContentLoaded', () => {
         bgm.play().then(() => {
             isPlaying = true;
             bgmBtn.textContent = '⏸️ BGM 끄기';
             bgmBtn.style.background = 'rgba(192, 57, 43, 0.9)';
         }).catch(error => {
-            // 브라우저 차단으로 자동 재생이 안 된 경우, 화면을 처음 터치할 때 재생되도록 설정
             console.log("자동 재생 차단됨, 사용자 상호작용 대기 중");
             document.addEventListener('click', function playOnTouch() {
                 bgm.play().then(() => {
                     isPlaying = true;
                     bgmBtn.textContent = '⏸️ BGM 끄기';
                     bgmBtn.style.background = 'rgba(192, 57, 43, 0.9)';
-                    document.removeEventListener('click', playOnTouch); // 한 번 실행 후 이벤트 제거
+                    document.removeEventListener('click', playOnTouch);
                 });
             }, { once: true });
         });
     });
 
-// 버튼을 누를 때는 이제 '끄기/켜기' 토글로 작동
     function toggleBgm() {
         if (isPlaying) {
             bgm.pause();
@@ -450,7 +399,6 @@
         }    
     }
     
-    // 방명록 로직 (Supabase 연동)
     document.addEventListener("DOMContentLoaded", loadGuestbook);
 
     async function addGuestbook() {
@@ -500,7 +448,6 @@
 
     async function loadGuestbook() {
         try {
-            // 최신순 정렬 (id 또는 생성일 기준 역순, 여기서는 생성된 데이터 역순으로 가져오기 위해 order 적용)
             const response = await fetch(`${SUPABASE_URL}?select=*&order=id.desc`, {
                 method: 'GET',
                 headers: {
