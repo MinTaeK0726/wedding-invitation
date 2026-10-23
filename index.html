@@ -132,12 +132,37 @@
         }
         /*서프라이즈 섹션 끝*/
 
-        /* 오시는 길 */
-        .map-section { background: var(--bg-color); text-align: left; }
-        .map-desc { font-size: 0.9rem; color: #555; margin-bottom: 15px; line-height: 1.5; }
-        .tip-box { background: #fff8f0; border-left: 3px solid var(--primary); padding: 12px; font-size: 0.85rem; color: #663300; margin-top: 15px; border-radius: 0 8px 8px 0; }
 
-        /* 푸터 */
+    <!-- 오시는 길 -->
+    <section class="map-section">
+        <!-- 배경 사진 위에서 눈에 띄도록 타이틀 색상 조정 -->
+        <h2 class="section-title" style="color: #fff; text-shadow: 0 2px 4px rgba(0,0,0,0.3); margin-bottom: 0;">LOCATION</h2>
+        
+        <!-- 👇 교통 안내 글씨 밑에 깔릴 배경 카드 박스 -->
+        <div class="map-card-box">
+            <p style="font-weight: bold; font-size: 1rem; margin-bottom: 5px; color: #333;">플로렌스 파티하우스 가천대점 3층 코스모스홀</p>
+            <p class="map-desc">경기 성남시 수정구 성남대로 1298</p>
+
+            <div class="btn-wrap" style="margin-bottom: 25px;">
+                <a href="https://map.naver.com/v5/search/플로렌스파티하우스가천대점" target="_blank" class="action-btn">네이버 지도</a>
+                <a href="https://kko.to/florence_gachon" target="_blank" class="action-btn">카카오맵</a>
+            </div>
+
+            <div style="font-size: 0.9rem; line-height: 1.6; text-align: left;">
+                <p style="font-weight: bold; color: var(--primary); margin-bottom: 5px;">🚇 지하철 이용 시</p>
+                <p style="margin-bottom: 15px; color: #555;">수인분당선 가천대역 3번 출구에서 전방 100미터 위치합니다.</p>
+
+                <p style="font-weight: bold; color: var(--primary); margin-bottom: 5px;">🚌 버스 이용 시</p>
+                <p style="margin-bottom: 15px; color: #555;">태평고개 (구)수진리고개 버스정류장 하차 도보 3미터 (횡단보도 건사실 필요 없이 직진거리에 5층 단독빌딩으로 찾기 편리하십니다.)</p>
+
+                <div class="tip-box">
+                    🚗 <b>주차 및 교통 안내</b><br>
+                    주차가 협소하오나 발렛파킹을 도와드리고 있습니다. 다만 대중교통이 편리한 위치이니 되도록 대중교통을 이용해주시면 감사하겠습니다!
+                </div>
+            </div>
+        </div>
+    </section>        
+    /* 푸터 */
         footer { background: #333; color: #aaa; text-align: center; padding: 30px 20px; font-size: 0.85rem; }
         
         /* 토스트 팝업 */
