@@ -47,11 +47,9 @@
 
         /* 인사말 및 연락처 섹션 */
         .greeting { background: #fff; text-align: left; }
-        
-        /* 👇 INVITATION과 소중한 분들을 초대합니다 사이 이미지 스타일 */
         .invitation-img-wrap {
             width: 100%;
-            max-width: 220px; /* 사진 크기 조절 가능 */
+            max-width: 220px;
             margin: 0 auto 20px auto;
             border-radius: 12px;
             overflow: hidden;
@@ -211,14 +209,10 @@
     <!-- 인사말 및 연락처 섹션 -->
     <section class="greeting">
         <h2 class="section-title" style="text-align: center;">INVITATION</h2>
-        
-        <!-- 👇 INVITATION과 소중한 분들을 초대합니다 사이에 들어갈 이미지 영역 -->
         <div class="invitation-img-wrap">
-            <img src="invitation-photo.JPG" alt="초대장 추가 이미지" onerror="this.src='https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=600&q=80'">
+            <img src="invitation-photo.jpg" alt="초대장 추가 이미지" onerror="this.src='https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=600&q=80'">
         </div>
-
         <p style="text-align: center; font-weight: 500; color: #222; margin-bottom: 25px;">소중한 분들을 초대합니다</p>
-        
         <div class="greeting-text">
             서로가 마주 보며 다져온 사랑을<br>
             이제 함께 같은 곳을 바라보며 걸어가고자 합니다.<br>
@@ -309,6 +303,13 @@
         </div>
     </section>
 
+    <!-- 👇 화환 문구와 GUESTBOOK 사이 추가 사진 섹션 -->
+    <section style="padding: 0; background: #fff;">
+        <div style="width: 100%; overflow: hidden;">
+            <img src="mid-photo.JPG" alt="계좌 안내 하단 추가 사진" style="width: 100%; height: auto; display: block;" onerror="this.src='https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80'">
+        </div>
+    </section>
+
     <!-- 축하 방명록 섹션 -->
     <section class="guestbook-section">
         <h2 class="section-title" style="text-align: center;">GUESTBOOK</h2>
@@ -340,7 +341,7 @@
         </p>
        </div>
       <div class="image-wrapper">
-        <img src="별_하.jpg" alt="예별이 이미지 상단" class="responsive-img">
+        <img src="별_하.jpg" alt="예별이 이미지 하단" class="responsive-img">
       </div>
     </section>
 
