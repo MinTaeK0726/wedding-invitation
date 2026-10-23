@@ -109,23 +109,35 @@
         .title { font-size: 24px; font-weight: bold; color: #ff6b6b; letter-spacing: 2px; margin-bottom: 12px; }
         .text { font-size: 15px; line-height: 1.6; color: #4a4a4a; word-break: keep-all; margin: 0; }
 
-        /* 오시는 길 섹션 배경 사진 설정 */
+        /* 오시는 길 섹션 스타일 (배경 사진) */
         .map-section { 
             position: relative;
-            background-image: url('교통안내배경사진.jpg'); /* 👈 사용하실 배경 사진 파일명으로 변경해주세요 */
+            /* 👇 배경 사진 경로 설정 (실제 올리신 파일명으로 지정해주세요) */
+            background-image: url('교통안내배경사진.jpg'); 
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
             text-align: left; 
         }
 
-        /* 사진 위에서 글씨가 잘 보이도록 감싸주는 하얀색 반투명 카드 박스 */
+        /* 오시는 길 내부 흰색 박스 카드 */
         .map-card-box {
-            background: rgba(255, 255, 255, 0.95); /* 흰색 반투명 배경 */
+            background: rgba(255, 255, 255, 0.92); /* 흰색 반투명 카드 */
             padding: 24px 20px;
             border-radius: 16px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            margin-top: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            margin-top: 15px;
+        }
+
+        /* 주차 안내 팁 박스 (색상 명확히 지정) */
+        .tip-box { 
+            background-color: #fff8f0 !important; 
+            border-left: 3px solid var(--primary); 
+            padding: 12px; 
+            font-size: 0.85rem; 
+            color: #663300; 
+            margin-top: 15px; 
+            border-radius: 0 8px 8px 0; 
         }
 
         /* 푸터 */
@@ -157,7 +169,6 @@
             <p class="date-loc" style="margin-top: 10px;">2027년 3월 6일 토요일 오전 11:00</p>
             <p class="date-loc" style="font-size: 0.9rem; margin-top: 4px;">플로렌스 파티하우스 가천대점 3층 코스모스홀</p>
 
-            <!-- 어릴적 사진 영역 -->
             <div class="child-photos-wrap">
                 <div class="child-card">
                     <div style="font-size: 0.75rem; color: var(--text-sub); margin-bottom: 8px; font-weight: 500;">
@@ -312,9 +323,9 @@
       </div>
     </section>
 
-    <!-- 오시는 길 (배경 사진 적용 및 흰색 카드 박스 구조) -->
+    <!-- 오시는 길 -->
     <section class="map-section">
-        <h2 class="section-title" style="color: #fff; text-shadow: 0 2px 4px rgba(0,0,0,0.3); margin-bottom: 0;">LOCATION</h2>
+        <h2 class="section-title">LOCATION</h2>
         
         <div class="map-card-box">
             <p style="font-weight: bold; font-size: 1rem; margin-bottom: 5px; color: #333;">플로렌스 파티하우스 가천대점 3층 코스모스홀</p>
@@ -332,7 +343,7 @@
                 <p style="font-weight: bold; color: var(--primary); margin-bottom: 5px;">🚌 버스 이용 시</p>
                 <p style="margin-bottom: 15px; color: #555;">태평고개 (구)수진리고개 버스정류장 하차 도보 3미터 (횡단보도 건사실 필요 없이 직진거리에 5층 단독빌딩으로 찾기 편리하십니다.)</p>
 
-                <div class="tip-box" style="background: #fff8f0; border-left: 3px solid var(--primary); padding: 12px; font-size: 0.85rem; color: #663300; margin-top: 15px; border-radius: 0 8px 8px 0;">
+                <div class="tip-box">
                     🚗 <b>주차 및 교통 안내</b><br>
                     주차가 협소하오나 발렛파킹을 도와드리고 있습니다. 다만 대중교통이 편리한 위치이니 되도록 대중교통을 이용해주시면 감사하겠습니다!
                 </div>
