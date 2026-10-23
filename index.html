@@ -41,7 +41,6 @@
         .child-name { font-weight: bold; font-size: 0.95rem; color: var(--primary); }
         .child-birth { font-size: 0.8rem; color: #666; margin-top: 3px; }
 
-        /* 👇 어릴적 사진과 INVITATION 사이 추가 사진 스타일 */
         .between-img-wrap {
             width: 100%;
             border-radius: 12px;
@@ -116,6 +115,32 @@
         .gb-item-date { font-size: 0.75rem; color: #999; font-weight: normal; }
         .gb-item-content { font-size: 0.9rem; color: #444; word-break: break-all; }
         .gb-delete-btn { background: none; border: none; color: #999; font-size: 0.75rem; cursor: pointer; float: right; margin-top: 5px; }
+
+        /* 👇 웨딩 사진 20개 갤러리 섹션 스타일 (2열 그리드) */
+        .gallery-section { background: #fff; text-align: left; }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-top: 15px;
+        }
+        .gallery-item {
+            width: 100%;
+            height: 200px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+        .gallery-item img:hover {
+            transform: scale(1.03);
+        }
 
         /* 서프라이즈 섹션 스타일 */
         .surprise-section {
@@ -218,9 +243,8 @@
                 </div>
             </div>
 
-            <!-- 👇 어릴적 사진 카드와 INVITATION 사이 추가 사진 영역 -->
             <div class="between-img-wrap">
-                <img src="between-photo.JPG" alt="커플 추가 사진" onerror="this.src='https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80'">
+                <img src="between-photo.jpg" alt="커플 추가 사진" onerror="this.src='https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80'">
             </div>
         </div>
     </section>
@@ -229,7 +253,7 @@
     <section class="greeting">
         <h2 class="section-title" style="text-align: center;">INVITATION</h2>
         <div class="invitation-img-wrap">
-            <img src="invitation-photo.JPG" alt="초대장 추가 이미지" onerror="this.src='https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=600&q=80'">
+            <img src="invitation-photo.jpg" alt="초대장 추가 이미지" onerror="this.src='https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=600&q=80'">
         </div>
         <p style="text-align: center; font-weight: 500; color: #222; margin-bottom: 25px;">소중한 분들을 초대합니다</p>
         <div class="greeting-text">
@@ -329,7 +353,7 @@
     <!-- 화환 문구와 GUESTBOOK 사이 추가 사진 섹션 -->
     <section style="padding: 0; background: #fff;">
         <div style="width: 100%; overflow: hidden;">
-            <img src="mid-photo.JPG" alt="계좌 안내 하단 추가 사진" style="width: 100%; height: auto; display: block;" onerror="this.src='https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80'">
+            <img src="mid-photo.jpg" alt="계좌 안내 하단 추가 사진" style="width: 100%; height: auto; display: block;" onerror="this.src='https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80'">
         </div>
     </section>
 
@@ -348,6 +372,35 @@
         </div>
 
         <div id="gbList" class="gb-list"></div>
+    </section>
+
+    <!-- 👇 웨딩 사진 20개 갤러리 섹션 -->
+    <section class="gallery-section">
+        <h2 class="section-title" style="text-align: center;">GALLERY</h2>
+        <p style="text-align: center; font-size: 0.9rem; color: #666; margin-bottom: 20px;">우리의 아름다운 순간들을 모았습니다</p>
+        
+        <div class="gallery-grid">
+            <div class="gallery-item"><img src="photo1.JPG" alt="웨딩 사진 1" onerror="this.src='https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=500&q=80'"></div>
+            <div class="gallery-item"><img src="photo2.JPG" alt="웨딩 사진 2" onerror="this.src='https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=500&q=80'"></div>
+            <div class="gallery-item"><img src="photo3.JPG" alt="웨딩 사진 3" onerror="this.src='https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=500&q=80'"></div>
+            <div class="gallery-item"><img src="photo4.JPG" alt="웨딩 사진 4" onerror="this.src='https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=500&q=80'"></div>
+            <div class="gallery-item"><img src="photo5.JPG" alt="웨딩 사진 5" onerror="this.src='https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=500&q=80'"></div>
+            <div class="gallery-item"><img src="photo6.JPG" alt="웨딩 사진 6" onerror="this.src='https://images.unsplash.com/photo-1532712938310-34cb3982ef74?auto=format&fit=crop&w=500&q=80'"></div>
+            <div class="gallery-item"><img src="photo7.JPG" alt="웨딩 사진 7" onerror="this.src='https://images.unsplash.com/photo-1507035895480-2b3156c31fc8?auto=format&fit=crop&w=500&q=80'"></div>
+            <div class="gallery-item"><img src="photo8.JPG" alt="웨딩 사진 8" onerror="this.src='https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&w=500&q=80'"></div>
+            <div class="gallery-item"><img src="photo9.JPG" alt="웨딩 사진 9" onerror="this.src='https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?auto=format&fit=crop&w=500&q=80'"></div>
+            <div class="gallery-item"><img src="photo10.JPG" alt="웨딩 사진 10" onerror="this.src='https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=500&q=80'"></div>
+            <div class="gallery-item"><img src="photo11.JPG" alt="웨딩 사진 11" onerror="this.src='https://images.unsplash.com/photo-1537633552985-df8429e8048b?auto=format&fit=crop&w=500&q=80'"></div>
+            <div class="gallery-item"><img src="photo12.JPG" alt="웨딩 사진 12" onerror="this.src='https://images.unsplash.com/photo-1544077960-604201fe74bc?auto=format&fit=crop&w=500&q=80'"></div>
+            <div class="gallery-item"><img src="photo13.JPG" alt="웨딩 사진 13" onerror="this.src='https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=500&q=80'"></div>
+            <div class="gallery-item"><img src="photo14.JPG" alt="웨딩 사진 14" onerror="this.src='https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=500&q=80'"></div>
+            <div class="gallery-item"><img src="photo15.JPG" alt="웨딩 사진 15" onerror="this.src='https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=500&q=80'"></div>
+            <div class="gallery-item"><img src="photo16.JPG" alt="웨딩 사진 16" onerror="this.src='https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=500&q=80'"></div>
+            <div class="gallery-item"><img src="photo17.JPG" alt="웨딩 사진 17" onerror="this.src='https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?auto=format&fit=crop&w=500&q=80'"></div>
+            <div class="gallery-item"><img src="photo18.JPG" alt="웨딩 사진 18" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=500&q=80'"></div>
+            <div class="gallery-item"><img src="photo19.JPG" alt="웨딩 사진 19" onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=500&q=80'"></div>
+            <div class="gallery-item"><img src="photo20.JPG" alt="웨딩 사진 20" onerror="this.src='https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=500&q=80'"></div>
+        </div>
     </section>
 
     <!-- 서프라이즈 섹션 -->
