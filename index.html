@@ -109,45 +109,44 @@
         .title { font-size: 24px; font-weight: bold; color: #ff6b6b; letter-spacing: 2px; margin-bottom: 12px; }
         .text { font-size: 15px; line-height: 1.6; color: #4a4a4a; word-break: keep-all; margin: 0; }
 
-/* 오시는 길 섹션 스타일 */
+        /* 오시는 길 섹션 스타일 (흑백 배경 적용) */
         .map-section { 
             position: relative;
             text-align: left; 
-            overflow: hidden; /* 배경 이미지가 섹션 밖으로 넘어가지 않도록 설정 */
+            overflow: hidden; 
         }
 
-        /* 👇 배경 사진만 흑백으로 만들어주는 가상 요소 */
+        /* 👇 배경 사진을 흑백으로 띄워주는 가상 요소 */
         .map-section::before {
             content: '';
             position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background-image: url('./map-back.jpg'); /* 배경 사진 파일명 */
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: url('./map-back.jpg'); 
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            
-            filter: grayscale(100%); /* 👈 배경 사진만 흑백 처리! */
-            z-index: 1; /* 카드 뒤로 보내기 */
+            filter: grayscale(100%); /* 흑백 처리 */
+            z-index: 1; 
         }
 
-        /* 오시는 길 내부 카드 박스 (투명도 조정) */
+        /* 오시는 길 내부 카드 박스 (투명도 조절) */
         .map-card-box {
             position: relative;
-            z-index: 2; /* 흑백 배경 위에 올라오도록 설정 */
-            
-            /* 👇 흰색 투명도 (0.65 = 65% 투명도 / 필요시 0.5~0.8 사이로 조절) */
-            background: rgba(255, 255, 255, 0.65); 
+            z-index: 2; 
+            background: rgba(255, 255, 255, 0.65); /* 💡 투명도를 65%로 주어 배경이 은은하게 비치도록 함 */
             padding: 24px 20px;
             border-radius: 16px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
             margin-top: 15px;
-            backdrop-filter: blur(3px); /* 💡 뒤쪽 흑백 사진이 살짝 흐릿하게 비쳐 더욱 분위기 있어집니다 */
+            backdrop-filter: blur(3px); /* 뒤 배경을 살짝 흐리게 하여 가독성 높임 */
         }
 
         /* 타이틀 위치 고정 */
         .map-section .section-title {
             position: relative;
             z-index: 2;
+            color: #fff; /* 배경 위에서 잘 보이도록 흰색 지정 */
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
         }        
         
         /* 푸터 */
@@ -353,7 +352,7 @@
                 <p style="font-weight: bold; color: var(--primary); margin-bottom: 5px;">🚌 버스 이용 시</p>
                 <p style="margin-bottom: 15px; color: #555;">태평고개 (구)수진리고개 버스정류장 하차 도보 3미터 (횡단보도 건사실 필요 없이 직진거리에 5층 단독빌딩으로 찾기 편리하십니다.)</p>
 
-                <div class="tip-box">
+                <div class="tip-box" style="background-color: #fff8f0; border-left: 3px solid var(--primary); padding: 12px; font-size: 0.85rem; color: #663300; margin-top: 15px; border-radius: 0 8px 8px 0;">
                     🚗 <b>주차 및 교통 안내</b><br>
                     주차가 협소하오나 발렛파킹을 도와드리고 있습니다. 다만 대중교통이 편리한 위치이니 되도록 대중교통을 이용해주시면 감사하겠습니다!
                 </div>
