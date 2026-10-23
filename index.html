@@ -109,19 +109,22 @@
         .title { font-size: 24px; font-weight: bold; color: #ff6b6b; letter-spacing: 2px; margin-bottom: 12px; }
         .text { font-size: 15px; line-height: 1.6; color: #4a4a4a; word-break: keep-all; margin: 0; }
 
-        /* 오시는 길 섹션 스타일 (흑백 배경 적용) */
+/* 오시는 길 섹션 스타일 (배경 사진 적용) */
         .map-section { 
             position: relative;
             text-align: left; 
             overflow: hidden; 
         }
 
-        /* 👇 배경 사진을 흑백으로 띄워주는 가상 요소 */
+        /* 배경 사진 가상 요소 */
         .map-section::before {
             content: '';
             position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background-image: url('./map-back.jpg'); 
+            top: 0; 
+            left: 0; 
+            right: 0; 
+            bottom: 0; /* 이 네 방향을 모두 0으로 주어야 섹션 전체에 꽉 찹니다 */
+            background-image: url('./map-back.jpg'); /* 👈 본인 파일명과 확장자에 맞게 수정 */
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -129,26 +132,25 @@
             z-index: 1; 
         }
 
-        /* 오시는 길 내부 카드 박스 (투명도 조절) */
+        /* 오시는 길 내부 카드 박스 */
         .map-card-box {
             position: relative;
-            z-index: 2; 
-            background: rgba(255, 255, 255, 0.65); /* 💡 투명도를 65%로 주어 배경이 은은하게 비치도록 함 */
+            z-index: 2; /* 배경보다 위로 오도록 설정 */
+            background: rgba(255, 255, 255, 0.65); /* 은은한 반투명 흰색 */
             padding: 24px 20px;
             border-radius: 16px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
             margin-top: 15px;
-            backdrop-filter: blur(3px); /* 뒤 배경을 살짝 흐리게 하여 가독성 높임 */
+            backdrop-filter: blur(3px);
         }
 
         /* 타이틀 위치 고정 */
         .map-section .section-title {
             position: relative;
             z-index: 2;
-            color: #fff; /* 배경 위에서 잘 보이도록 흰색 지정 */
+            color: #fff;
             text-shadow: 0 2px 4px rgba(0,0,0,0.3);
         }        
-        
         /* 푸터 */
         footer { background: #333; color: #aaa; text-align: center; padding: 30px 20px; font-size: 0.85rem; }
         
